@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
+
+:root {
+  --Purple: hsl(259, 100%, 65%);
+  --Light-red: hsl(0, 100%, 67%);
+
+  --White: hsl(0, 0%, 100%);
+  --Off-white: hsl(0, 0%, 94%);
+  --Light-grey: hsl(0, 0%, 86%);
+  --Smokey-grey: hsl(0, 1%, 44%);
+  --Off-black: hsl(0, 0%, 8%);
+
+  --input-fs: 32px;
+  --fw-bold: 800;
+  --fw-semi-bold: 700;
+  --fw-light: 400;
+  --font-family: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--Light-grey);
+  font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background: var(--White);
+  border-radius: 1rem 1rem 8rem 1rem;
+  width: 600px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.age-form {
+  display: flex;
+  gap: 1rem;
+}
+.age-input {
+  display: flex;
+  flex-direction: column;
+}
+.age-input label {
+  text-transform: uppercase;
+  font-weight: var(--fw-semi-bold);
+  color: var(--Smokey-grey);
+  font-size: 10px;
+}
+
+.age-input input {
+  width: 130px;
+  padding: 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--Light-grey);
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.age-input input::placeholder {
+  color: var(--Smokey-grey);
+}
+
+.barrier {
+  display: flex;
+  display: flex;
+  align-items: center;
+}
+
+.barrier button {
+  background: var(--Purple);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: none;
+}
+
+.barrier hr {
+  width: 100%;
+  height: 1px;
+  background: var(--Light-grey);
+  border: none;
+}
+
+.result h1 {
+  font-size: 5rem;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 5.1rem;
+}
+
+.result span {
+  color: var(--Purple);
+}
+
+.error-message {
+  color: var(--Light-red);
+  font-weight: var(--fw-light);
+  font-size: 12px;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 360px;
+    padding: 1rem;
+  }
+
+  .age-input input {
+    width: 100px;
+  }
+
+  .barrier {
+    position: relative;
+  }
+
+  .barrier button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .result h1 {
+    font-size: 3rem;
+    line-height: 3.1rem;
+  }
+
+  .error-message {
+    font-size: 10px;
+  }
+}
